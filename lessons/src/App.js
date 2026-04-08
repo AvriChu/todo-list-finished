@@ -1,17 +1,17 @@
 import { lazy, Suspense, useEffect } from 'react';
-import Dz9_todo from './components/dz9_todo';
+import Dz9_todo from './components/DZ9Todo';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import Loader from './dz10_pages/Loader';
-import PrivateRoute from './dz10_pages/PrivateRoute';
+import Loader from './DZ10Pages/Loader';
+import PrivateRoute from './DZ10Pages/PrivateRoute';
 import { useDispatch } from 'react-redux';
 import { fetchUser } from './redux/user/UserSlice';
-const HomePage = lazy(() => import('./dz10_pages/homePage'));
-const AboutPage = lazy(() => import('./dz10_pages/aboutPage'));
-const Leyout = lazy(() => import('./dz10_pages/Leyout'));
-const TodoEdit = lazy(() => import('./dz10_pages/TodoEdit'));
-const NotFoundPage = lazy(() => import('./dz10_pages/notFoundPage'));
+const HomePage = lazy(() => import('./DZ10Pages/HomePage'));
+const AboutPage = lazy(() => import('./DZ10Pages/AboutPage'));
+const Leyout = lazy(() => import('./DZ10Pages/Leyout'));
+const TodoEdit = lazy(() => import('./DZ10Pages/TodoEdit'));
+const NotFoundPage = lazy(() => import('./DZ10Pages/NotFoundPage'));
 
 function App() {
   const dispatch = useDispatch();

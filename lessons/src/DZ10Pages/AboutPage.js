@@ -1,4 +1,4 @@
-import myImg from './autor-img.jpg';
+import myImg from './AutorImg.jpg';
 
 const AboutPage = () => {
   return (
