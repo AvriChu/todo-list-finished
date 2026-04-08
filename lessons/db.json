@@ -1,0 +1,50 @@
+{
+  "auth": {
+    "isAuthenticated": true
+  },
+  "todos": [
+    {
+      "id": "c4ee",
+      "tittle": "w",
+      "desription": "w",
+      "checked": false,
+      "creactionDate": "18.03.2026"
+    },
+    {
+      "id": "b427",
+      "tittle": "zxcxc",
+      "desription": "zcxc",
+      "checked": false,
+      "creactionDate": "23.03.2026"
+    },
+    {
+      "id": "bdb7",
+      "tittle": "sdfdf",
+      "desription": "sdfsdf",
+      "checked": false,
+      "creactionDate": "26.03.2026"
+    },
+    {
+      "id": "b77f",
+      "tittle": "sadsd",
+      "desription": "adasd",
+      "checked": false,
+      "creactionDate": "01.04.2026"
+    },
+    {
+      "id": "c995",
+      "tittle": "aaaa",
+      "desription": "aaaaa",
+      "checked": false,
+      "creactionDate": "01.04.2026"
+    },
+    {
+      "id": "adc0",
+      "tittle": "ss",
+      "desription": "ss",
+      "checked": false,
+      "creactionDate": "01.04.2026"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
