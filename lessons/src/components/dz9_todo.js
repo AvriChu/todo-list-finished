@@ -1,36 +1,9 @@
 import { useEffect, useState } from 'react';
-import { GetList } from '../api/api';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, deleteTodo, fetchList } from '../redux/todos/TodosSlice';
 
 const Dz9_todo = () => {
-  // const getFun = async () => {
-  //   if (inputList.name && inputList.desription) {
-  //     try {
-  //       setRequestLoading(true);
-  //       const newTodo = {
-  //         tittle: inputList.name,
-  //         desription: inputList.desription,
-  //         checked: inputList.checked,
-  //         creactionDate: new Date().toLocaleDateString('ua-UA'),
-  //       };
-  //       const response = await axios.post('todos', newTodo);
-  //       setButtonsCl(false);
-  //       setTodos(prev => [...prev, response.data]);
-  //       setInputList({
-  //         name: '',
-  //         desription: '',
-  //         checked: false,
-  //       });
-  //     } catch (error) {
-  //       setError(error.message);
-  //     } finally {
-  //       setRequestLoading(false);
-  //     }
-  //   }
-  // };
   const getFun = async () => {
     dispatch(addTodo(inputList));
     setButtonsCl(false);
@@ -40,46 +13,19 @@ const Dz9_todo = () => {
       checked: false,
     });
   };
-  // const deleteFun = async id => {
-  //   try {
-  //     // setRequestLoading(true);
-  //     await axios.delete(`todos/${id}`);
-  //     setTodos(prev => prev.filter(item => item.id !== id));
-  //   } catch (error) {
-  //     setError(error.message);
-  //   } finally {
-  //     // setRequestLoading(false);
-  //   }
-  // };
   const deleteFun = async id => {
     dispatch(deleteTodo(id));
   };
-  // const fetchData = async () => {
-  //   setLoading(true);
-  //   try {
-  //     const data = await GetList();
-  //     setTodos(data);
-  //   } catch (error) {
-  //     console.warn('Ops! ', error);
-  //     setError(error.message);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const dispatch = useDispatch();
   useEffect(() => {
-    // fetchData();
     dispatch(fetchList());
   }, [dispatch]);
 
-  // const [todos, setTodos] = useState([]);
-  // const [error, setError] = useState(null);
   const [inputList, setInputList] = useState({
     name: '',
     desription: '',
     checked: false,
   });
-  // const [requestLoading, setRequestLoading] = useState(false);
   const todos = useSelector(state => state.todos.todos);
   const loading = useSelector(state => state.todos.loading);
   const error = useSelector(state => state.todos.error);
