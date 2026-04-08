@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, deleteTodo, fetchList } from '../redux/todos/TodosSlice';
 
-const Dz9_todo = () => {
+const Dz9Todo = () => {
   const getFun = async () => {
     dispatch(addTodo(inputList));
     setButtonsCl(false);
@@ -119,4 +119,4 @@ const Dz9_todo = () => {
   );
 };
 
-export default Dz9_todo;
+export default Dz9Todo;
