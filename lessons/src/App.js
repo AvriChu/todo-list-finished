@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import DZ9Todo from './components/DZ9Todo';
+import Dz9Todo from './components/DZ9Todo';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -30,7 +30,7 @@ function App() {
                 path='/todos'
                 element={
                   <PrivateRoute>
-                    <DZ9Todo />
+                    <Dz9Todo />
                   </PrivateRoute>
                 }
               />
